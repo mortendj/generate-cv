@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "John Doe – CV",
+    "output_pdf": "john_doe_cv.pdf",
+    "default_language": "en",
+    "languages_available": ["en", "pt"]
+  },
+  "contact": {
+    "name": "John Doe",
+    "location": {
+      "en": "Kabelvaag, Norway",
+      "pt": "Kabelvaag, Noruega"
+    },
+    "email": "john.doe@example.com",
+    "mobile": "+1 (555) 123-4567",
+    "whatsapp_link": "https://wa.me/15551234567",
+    "linkedin_label": "linkedin.com/in/johndoe-example",
+    "linkedin_url": "https://www.linkedin.com/in/johndoe-example/"
+  },
+  "summary": [
+    {
+      "en": "Software engineer with 6 years of experience building web applications and automation tooling.",
+      "pt": "Engenheiro de software com 6 anos de experiência no desenvolvimento de aplicações web e ferramentas de automação."
+    },
+    {
+      "en": "Comfortable working across the stack, with a focus on backend services and developer tooling.",
+      "pt": "Confortável trabalhando em toda a stack, com foco em serviços de backend e ferramentas para desenvolvedores."
+    },
+    {
+      "en": "Enjoys mentoring junior engineers and improving team processes.",
+      "pt": "Gosta de orientar engenheiros juniores e melhorar os processos da equipe."
+    }
+  ],
+  "skills": [
+    {
+      "group": {
+        "en": "Languages & Frameworks",
+        "pt": "Linguagens & Frameworks"
+      },
+      "items": [
+        {
+          "en": "Python (Django, FastAPI)",
+          "pt": "Python (Django, FastAPI)"
+        },
+        {
+          "en": "JavaScript / TypeScript (Node.js, React)",
+          "pt": "JavaScript / TypeScript (Node.js, React)"
+        },
+        {
+          "en": "SQL (PostgreSQL, MySQL)",
+          "pt": "SQL (PostgreSQL, MySQL)"
+        }
+      ]
+    },
+    {
+      "group": {
+        "en": "Tools & Platforms",
+        "pt": "Ferramentas & Plataformas"
+      },
+      "items": [
+        {
+          "en": "Docker",
+          "pt": "Docker"
+        },
+        {
+          "en": "AWS",
+          "pt": "AWS"
+        },
+        {
+          "en": "Git / GitHub",
+          "pt": "Git / GitHub"
+        },
+        {
+          "en": "CI/CD pipelines",
+          "pt": "Pipelines de CI/CD"
+        }
+      ]
+    }
+  ],
+  "languages": [
+   {
+      "name": {
+        "en": "Norwegian",
+        "pt": "Norueguês"
+      },
+      "level": {
+        "en": "Native",
+        "pt": "Nativo"
+      }
+    },
+    {
+      "name": {
+        "en": "English",
+        "pt": "Inglês"
+      },
+      "level": {
+        "en": "Full professional proficiency",
+        "pt": "Plena proficiência profissional"
+      }
+    },
+    {
+      "name": {
+        "en": "Spanish",
+        "pt": "Espanhol"
+      },
+      "level": {
+        "en": "Conversational",
+        "pt": "Conversacional"
+      }
+    }
+  ],
+  "education": [
+    {
+      "degree": {
+        "en": "B.Sc. in Computer Science",
+        "pt": "Bacharelado em Ciência da Computação"
+      },
+      "institution": {
+        "en": "Federal University of Technology",
+        "pt": "Universidade Tecnológica Federal do Paraná (UTFPR)"
+      },
+      "location": {
+        "en": "Pato Branco, Parana",
+        "pt": "Pato Branco, Paraná"
+      },
+      "year": "2018"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Example Tech Inc.",
+      "note": "",
+      "roles": [
+        {
+          "title": {
+            "en": "Software Engineer",
+            "pt": "Engenheiro de Software"
+          },
+          "period": {
+            "en": "2021 – present",
+            "pt": "2021 – atual"
+          },
+          "location": {
+            "en": "Remote — USA",
+            "pt": "Remoto — EUA"
+          },
+          "bullets": [
+            {
+              "en": "Built and maintained internal automation tools using Python, reducing manual reporting time significantly.",
+              "pt": "Desenvolvi e mantive ferramentas internas de automação em Python, reduzindo significativamente o tempo de geração manual de relatórios."
+            },
+            {
+              "en": "Collaborated with cross-functional teams to design and ship new API features.",
+              "pt": "Colaborei com equipes multifuncionais no design e na entrega de novas funcionalidades de API."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Sample Software Co.",
+      "note": "",
+      "roles": [
+        {
+          "title": {
+            "en": "Junior Developer",
+            "pt": "Desenvolvedor Júnior"
+          },
+          "period": "2018 – 2021",
+          "location": {
+            "en": "Pato Branco, Parana",
+            "pt": "Pato Branco, Paraná"
+          },
+          "bullets": [
+            {
+              "en": "Developed and tested features for a customer-facing web application.",
+              "pt": "Desenvolvi e testei funcionalidades para uma aplicação web voltada ao cliente."
+            },
+            {
+              "en": "Participated in code reviews and improved test coverage across the codebase.",
+              "pt": "Participei de revisões de código e melhorei a cobertura de testes da base de código."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

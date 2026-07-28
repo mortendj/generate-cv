@@ -1,0 +1,14 @@
+*.bak
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+# Virtual environment
+venv/
+.env/
+# Secrets / config
+.env
+secrets.json
+# OS clutter
+.DS_Store
+Thumbs.db
