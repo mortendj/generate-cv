@@ -55,6 +55,11 @@ header .contact-block {
 
 header .contact-block a { color: #90cdf4; }
 
+header .contact-block .contact-label {
+  color: #a0aec0;
+  font-weight: 600;
+}
+
 /* ── SIDEBAR ──────────────────────────────────────────────── */
 .sidebar {
   grid-column: 1;

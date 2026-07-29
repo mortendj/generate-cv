@@ -10,7 +10,10 @@ Usage:
     python generate_cv.py --lang pt
     python generate_cv.py --html-only
 
-See SETUP.md for installation instructions.
+Requires a contact_private.json file (not checked into git) providing
+email, mobile, and whatsapp_link — see README.md for the expected shape.
+
+See README.md for installation instructions.
 """
 
 import argparse
@@ -47,6 +50,26 @@ def esc(text: str) -> str:
     )
 
 
+CONTACT_LABELS = {
+    "en": {
+        "email":    "Email",
+        "mobile":   "Mobile / WhatsApp",
+        "linkedin": "LinkedIn",
+        "github":   "GitHub"
+    },
+    "pt": {
+        "email":    "E-mail",
+        "mobile":   "Celular / WhatsApp",
+        "linkedin": "LinkedIn",
+        "github":   "GitHub"
+    }
+}
+
+
+def get_contact_label(key: str, lang: str) -> str:
+    return CONTACT_LABELS.get(lang, {}).get(key) or CONTACT_LABELS["en"][key]
+
+
 def build_header(contact: dict, lang: str) -> str:
     name           = esc(t(contact['name'], lang))
     location       = esc(t(contact['location'], lang))
@@ -55,15 +78,24 @@ def build_header(contact: dict, lang: str) -> str:
     whatsapp_link  = esc(t(contact['whatsapp_link'], lang))
     linkedin_url   = esc(t(contact['linkedin_url'], lang))
     linkedin_label = esc(t(contact['linkedin_label'], lang))
+    github_url     = esc(t(contact['github_url'], lang))
+    github_label   = esc(t(contact['github_label'], lang))
+
+    email_label    = esc(get_contact_label("email", lang))
+    mobile_label   = esc(get_contact_label("mobile", lang))
+    linkedin_lbl   = esc(get_contact_label("linkedin", lang))
+    github_lbl     = esc(get_contact_label("github", lang))
+
     return f"""  <header>
     <div class="name-block">
       <h1>{name}</h1>
       <p>{location}</p>
     </div>
     <div class="contact-block">
-      <div>&#128231; <a href="mailto:{email}">{email}</a></div>
-      <div>&#128241; <a href="{whatsapp_link}">{mobile}</a>&nbsp;(Mobile / WhatsApp)</div>
-      <div>&#128279; <a href="{linkedin_url}">{linkedin_label}</a></div>
+      <div><span class="contact-label">{email_label}</span> <a href="mailto:{email}">{email}</a></div>
+      <div><span class="contact-label">{mobile_label}</span> <a href="{whatsapp_link}">{mobile}</a></div>
+      <div><span class="contact-label">{linkedin_lbl}</span> <a href="{linkedin_url}">{linkedin_label}</a></div>
+      <div><span class="contact-label">{github_lbl}</span> <a href="{github_url}">{github_label}</a></div>
     </div>
   </header>"""
 
@@ -287,6 +319,13 @@ def parse_args() -> argparse.Namespace:
         help="Path to the CSS file         (default: cv.css)"
     )
     parser.add_argument(
+        "--contact",
+        default="contact_private.json",
+        metavar="FILE",
+        help="Path to the private contact JSON (email, mobile, whatsapp_link) — "
+             "not checked into git (default: contact_private.json)"
+    )
+    parser.add_argument(
         "--lang",
         default=None,
         metavar="LANG",
@@ -334,13 +373,28 @@ def generate_one(data: dict, css_path: Path, lang: str,
 def main() -> None:
     args = parse_args()
 
-    json_path = Path(args.json)
-    css_path  = Path(args.css)
+    json_path    = Path(args.json)
+    css_path     = Path(args.css)
+    contact_path = Path(args.contact)
 
     for path in (json_path, css_path):
         if not path.exists():
             print(f"\n  ERROR: File not found: {path}\n")
             sys.exit(1)
+
+    if not contact_path.exists():
+        print(
+            f"\n  ERROR: Private contact file not found: {contact_path}\n"
+            f"  This file holds your email, mobile, and WhatsApp link and is "
+            f"intentionally not checked into git.\n"
+            f"  Create it with the following shape and try again:\n\n"
+            f'    {{\n'
+            f'      "email": "you@example.com",\n'
+            f'      "mobile": "+1 (555) 123-4567",\n'
+            f'      "whatsapp_link": "https://wa.me/15551234567"\n'
+            f'    }}\n'
+        )
+        sys.exit(1)
 
     try:
         data = json.loads(json_path.read_text(encoding="utf-8"))
@@ -348,8 +402,17 @@ def main() -> None:
         print(f"\n  ERROR: Invalid JSON in {json_path}:\n  {e}\n")
         sys.exit(1)
 
+    try:
+        contact_data = json.loads(contact_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        print(f"\n  ERROR: Invalid JSON in {contact_path}:\n  {e}\n")
+        sys.exit(1)
+
+    data["contact"].update(contact_data)
+
     print(f"\n  Reading  JSON : {json_path}")
     print(f"  Reading  CSS  : {css_path}")
+    print(f"  Reading  Contact (private) : {contact_path}")
 
     if args.all_languages:
         available = data.get("meta", {}).get("languages_available", ["en"])

@@ -56,6 +56,23 @@ You should see something like:
 Version 1.49.0
 ```
 
+### 6. Create your private contact file
+
+Your email, mobile number, and WhatsApp link are **not** stored in
+`cv_data.json` and are **not** checked into git — they live in a separate
+file, `contact_private.json`, that the script requires on every run:
+
+```json
+{
+  "email": "you@example.com",
+  "mobile": "+1 (555) 123-4567",
+  "whatsapp_link": "https://wa.me/15551234567"
+}
+```
+
+Create this file in the project root. Without it, `generate_cv.py` will
+refuse to run and print the expected shape as a reminder.
+
 ---
 
 ## File structure
@@ -63,13 +80,25 @@ Version 1.49.0
 ```
 cv/
 ├── requirements.txt           ← Python dependencies
-├── SETUP.md                   ← this file
+├── README.md                  ← this file
 ├── generate_cv.py             ← generator script
-├── cv_data.json               ← your CV content
+├── cv_data.json               ← your CV content (no email/phone — see below)
 ├── cv.css                     ← styling
-├── morten_johnsen_cv.html     ← generated (for browser preview)
-└── morten_johnsen_cv.pdf      ← generated (final output)
+├── contact_private.json       ← your email/mobile/WhatsApp (gitignored, you create this)
+└── .gitignore
 ```
+
+Everything above is checked into git **except** `contact_private.json`.
+
+The following are **generated output**, not part of the codebase — they're
+git-ignored and get overwritten every time you run the script:
+
+```
+<name>_<lang>.html    ← generated (for browser preview)
+<name>_<lang>.pdf     ← generated (final output)
+```
+
+e.g. `morten_johnsen_cv_en.pdf`, `morten_johnsen_cv_pt.pdf`.
 
 ---
 
@@ -80,6 +109,18 @@ cv/
 ```bash
 python generate_cv.py
 ```
+
+### Generate both languages in one go
+
+```bash
+python generate_cv.py --all-languages
+```
+
+Produces one HTML+PDF pair per language listed in `cv_data.json`'s
+`meta.languages_available` (e.g. `en`, `pt`). Section titles and contact
+labels (Email, Mobile / WhatsApp, LinkedIn, GitHub) are translated
+automatically; override the built-in translations via
+`meta.section_labels` in the JSON if needed.
 
 ### Generate HTML only (fast preview, no PDF)
 
@@ -94,9 +135,10 @@ committing to a PDF render.
 
 ```bash
 python generate_cv.py \
-    --json  cv_data.json \
-    --css   cv.css \
-    --output morten_johnsen_cv.pdf
+    --json     cv_data.json \
+    --css      cv.css \
+    --contact  contact_private.json \
+    --output   morten_johnsen_cv.pdf
 ```
 
 ### Tailored version for a specific job application
@@ -117,7 +159,8 @@ python generate_cv.py \
     --output cv_ai_role.pdf
 ```
 
-The CSS and generator script stay untouched between versions.
+`contact_private.json` stays the same across tailored versions — only
+`--json` needs to change. The CSS and generator script stay untouched too.
 
 ---
 
@@ -189,6 +232,16 @@ python -m playwright install chromium
 
 ---
 
+### `ERROR: Private contact file not found`
+
+**Cause:** `contact_private.json` doesn't exist yet — it's intentionally
+git-ignored, so a fresh clone (or a fresh machine) won't have it.
+
+**Fix:** Create it in the project root with the shape shown in
+[step 6 of First-time setup](#6-create-your-private-contact-file).
+
+---
+
 ### PDF background colors are missing
 
 The script passes `print_background=True` to Playwright automatically.
@@ -238,8 +291,8 @@ Increase `top` and `bottom` values if content is being clipped.
 # Activate environment (do this first, every session)
 venv\Scripts\activate
 
-# Generate HTML + PDF
-python generate_cv.py
+# Generate HTML + PDF, both languages
+python generate_cv.py --all-languages
 
 # Generate HTML only (browser preview)
 python generate_cv.py --html-only

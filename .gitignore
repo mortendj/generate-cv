@@ -9,6 +9,10 @@ venv/
 # Secrets / config
 .env
 secrets.json
+contact_private.json
+# Generated CV output (not part of the source)
+*.html
+*.pdf
 # OS clutter
 .DS_Store
 Thumbs.db
