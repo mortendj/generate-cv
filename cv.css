@@ -161,8 +161,6 @@ header .contact-block .contact-label {
 /* ── COMPANY BLOCK ────────────────────────────────────────── */
 .company {
   margin-bottom: 28px;
-  break-inside: avoid;
-  page-break-inside: avoid;
 }
 
 .company-header {
@@ -174,6 +172,15 @@ header .contact-block .contact-label {
   page-break-after: avoid;
 }
 
+/* Keep the heading paired with its first role — a single-role company
+   (or short one) stays together as a unit, while a company with many
+   roles can still span pages, breaking cleanly between roles instead
+   of forcing the whole block onto a fresh page. */
+.company-header + .role {
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
 .company-name { font-size: 13pt; font-weight: 700; color: #1a1a2e; }
 .company-note { font-size: 8.5pt; color: #718096; font-style: italic; }
 
@@ -182,6 +189,8 @@ header .contact-block .contact-label {
   margin-bottom: 14px;
   padding-left: 14px;
   border-left: 3px solid #2563a8;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .role-header {
