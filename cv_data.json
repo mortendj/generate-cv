@@ -400,7 +400,10 @@
         {
           "title": "Instructor",
           "period": "2007",
-          "location": "Bangalore · Hong Kong · Munich · Milan · Seoul",
+          "location": {
+            "en": "Bangalore · Hong Kong · Munich · Milan · Seoul",
+            "pt": "Bangalore · Hong Kong · Munique · Milão · Seul"
+          },
           "bullets": [
             {
               "en": "Took on a three-month global instructor assignment, teaching client engineers the FAST search engine across training centers throughout Europe and Asia — bringing practitioner-level depth that went well beyond standard course delivery.",
@@ -429,7 +432,10 @@
         {
           "title": "Senior Software Architect",
           "period": "2004 – 2006",
-          "location": "Brevik, Norway",
+          "location": {
+            "en": "Brevik, Norway",
+            "pt": "Brevik, Noruega"
+          },
           "bullets": [
             {
               "en": "Designed and implemented large customization projects integrating FAST search with enterprise content platforms.",
@@ -444,7 +450,10 @@
         {
           "title": "Senior Software Architect",
           "period": "2003 – 2004",
-          "location": "Tokyo, Japan",
+          "location": {
+            "en": "Tokyo, Japan",
+            "pt": "Tóquio, Japão"
+          },
           "bullets": [
             {
               "en": "Contributed across sales engineering, professional services, and on-site customer support in the four-person Tokyo regional office.",
@@ -459,7 +468,10 @@
         {
           "title": "Senior Software Architect",
           "period": "2001 – 2003",
-          "location": "Boston, Massachusetts, USA",
+          "location": {
+            "en": "Boston, Massachusetts, USA",
+            "pt": "Boston, Massachusetts, EUA"
+          },
           "bullets": [
             {
               "en": "Led R&D projects to improve CJK (Chinese, Japanese, Korean) search capabilities.",
@@ -480,7 +492,10 @@
         {
           "title": "Senior Staff Software Engineer",
           "period": "1997 – 2001",
-          "location": "Raleigh, North Carolina, USA",
+          "location": {
+            "en": "Raleigh, North Carolina, USA",
+            "pt": "Raleigh, Carolina do Norte, EUA"
+          },
           "bullets": [
             {
               "en": "Developed a noise reduction microphone array for cellular applications.",
@@ -495,7 +510,10 @@
         {
           "title": "Software Engineer",
           "period": "1995 – 1997",
-          "location": "Arendal, Norway",
+          "location": {
+            "en": "Arendal, Norway",
+            "pt": "Arendal, Noruega"
+          },
           "bullets": [
             {
               "en": "Engineered low-level firmware for PCMCIA GSM modems, implementing hardware-to-chip integration and communication protocols.",
@@ -512,7 +530,10 @@
         {
           "title": "Teacher",
           "period": "1994 – 1995",
-          "location": "Sola, Norway",
+          "location": {
+            "en": "Sola, Norway",
+            "pt": "Sola, Noruega"
+          },
           "bullets": [
             {
               "en": "Taught science and IT at secondary school level (10-month position).",
@@ -529,7 +550,10 @@
         {
           "title": "Programmer",
           "period": "1993 – 1994",
-          "location": "Valencia, Spain",
+          "location": {
+            "en": "Valencia, Spain",
+            "pt": "Valência, Espanha"
+          },
           "bullets": [
             {
               "en": "Hired directly out of university to apply thesis expertise commercially — developed an image processing-based traffic incident detection system, extending the vehicle tracking work from the final degree project.",
