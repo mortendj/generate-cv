@@ -343,7 +343,10 @@
         {
           "title": "Senior Software Developer",
           "period": "2011 – 2013",
-          "location": "Rio de Janeiro, Brazil",
+          "location": {
+            "en": "Rio de Janeiro, Brazil",
+            "pt": "Rio de Janeiro, Brasil"
+          },
           "bullets": [
             {
               "en": "Developed test automation for the SharePoint document parser using C# and PowerShell.",
@@ -408,7 +411,10 @@
         {
           "title": "Senior Software Architect",
           "period": "2006 – 2007",
-          "location": "Rio de Janeiro, Brazil",
+          "location": {
+            "en": "Rio de Janeiro, Brazil",
+            "pt": "Rio de Janeiro, Brasil"
+          },
           "bullets": [
             {
               "en": "Acted as technical lead on various OEM projects.",
