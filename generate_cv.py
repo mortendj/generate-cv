@@ -140,14 +140,15 @@ def build_languages(languages: list, lang: str, label: str) -> str:
 def build_education(education: list, lang: str, label: str) -> str:
     html = f'    <div class="section-title">{esc(label)}</div>\n'
     for edu in education:
+        year = edu.get("year")
+        year_html = f'      <div class="year">{esc(t(year, lang))}</div>\n' if year else ""
         html += f"""    <div class="edu-item">
       <div class="degree">{esc(t(edu['degree'], lang))}</div>
       <div class="institution">
         {esc(t(edu['institution'], lang))}<br/>
         {esc(t(edu['location'], lang))}
       </div>
-      <div class="year">{esc(edu['year'])}</div>
-    </div>\n"""
+{year_html}    </div>\n"""
     return html
 
 
