@@ -1,0 +1,116 @@
+[
+{
+  "company": "Fast Search & Transfer",
+  "note": {
+    "en": "acquired by Microsoft",
+    "pt": "adquirida pela Microsoft"
+  },
+  "roles": [
+    {
+      "title": "Program Director",
+      "period": "2007 – 2009",
+      "location": "Colombo, Sri Lanka",
+      "bullets": [
+        {
+          "en": "Built and drove the full training program for the new Sri Lanka office — personally delivering sessions and coordinating subject-matter experts flown in from Norway to cover specialized topics.",
+          "pt": "Estruturei e conduzi o programa completo de treinamento para o novo escritório no Sri Lanka — ministrando sessões pessoalmente e coordenando especialistas trazidos da Noruega para cobrir tópicos especializados."
+        },
+        {
+          "en": "Grew the office from an initial team of 2 to over 120 employees.",
+          "pt": "Expandi o escritório de uma equipe inicial de 2 para mais de 120 colaboradores."
+        },
+        {
+          "en": "Established local capabilities in development, support, and management of FAST search engine solutions.",
+          "pt": "Estabeleci capacidades locais em desenvolvimento, suporte e gestão de soluções de busca FAST."
+        }
+      ]
+    },
+    {
+      "title": "Instructor",
+      "period": "2007",
+      "location": {
+        "en": "Bangalore · Hong Kong · Munich · Milan · Seoul",
+        "pt": "Bangalore · Hong Kong · Munique · Milão · Seul"
+      },
+      "bullets": [
+        {
+          "en": "Took on a three-month global instructor assignment, teaching client engineers the FAST search engine across training centers throughout Europe and Asia — bringing practitioner-level depth that went well beyond standard course delivery.",
+          "pt": "Assumi uma missão global de três meses como instrutor, ensinando engenheiros de clientes a utilizar o mecanismo de busca FAST em centros de treinamento pela Europa e Ásia — com profundidade de nível prático que ia muito além da entrega padrão de cursos."
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Architect",
+      "period": "2006 – 2007",
+      "location": {
+        "en": "Rio de Janeiro, Brazil",
+        "pt": "Rio de Janeiro, Brasil"
+      },
+      "bullets": [
+        {
+          "en": "Acted as technical lead on various OEM projects.",
+          "pt": "Atuei como líder técnico em diversos projetos OEM."
+        },
+        {
+          "en": "Led a major upgrade and improvement project for EMC Documentum using FAST search technology.",
+          "pt": "Liderei um projeto de grande porte de atualização e melhoria do EMC Documentum utilizando a tecnologia de busca FAST."
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Architect",
+      "period": "2004 – 2006",
+      "location": {
+        "en": "Brevik, Norway",
+        "pt": "Brevik, Noruega"
+      },
+      "bullets": [
+        {
+          "en": "Designed and implemented large customization projects integrating FAST search with enterprise content platforms.",
+          "pt": "Projetei e implementei projetos de customização de grande escala integrando a busca FAST a plataformas de gestão de conteúdo corporativo."
+        },
+        {
+          "en": "Key projects: EMC Documentum (now OpenText Documentum) and Renew Data (now KLDiscovery) integrations.",
+          "pt": "Projetos principais: integrações com EMC Documentum (atualmente OpenText Documentum) e Renew Data (atualmente KLDiscovery)."
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Architect",
+      "period": "2003 – 2004",
+      "location": {
+        "en": "Tokyo, Japan",
+        "pt": "Tóquio, Japão"
+      },
+      "bullets": [
+        {
+          "en": "Contributed across sales engineering, professional services, and on-site customer support in the four-person Tokyo regional office.",
+          "pt": "Atuei em vendas técnicas, serviços profissionais e suporte presencial a clientes no escritório regional de Tóquio, composto por quatro pessoas."
+        },
+        {
+          "en": "Supported Japanese customers in integrating and customizing FAST search solutions.",
+          "pt": "Apoiei clientes japoneses na integração e customização de soluções de busca FAST."
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Architect",
+      "period": "2001 – 2003",
+      "location": {
+        "en": "Boston, Massachusetts, USA",
+        "pt": "Boston, Massachusetts, EUA"
+      },
+      "bullets": [
+        {
+          "en": "Led R&D projects to improve CJK (Chinese, Japanese, Korean) search capabilities.",
+          "pt": "Liderei projetos de P&D para aprimorar as capacidades de busca em CJK (chinês, japonês e coreano)."
+        },
+        {
+          "en": "Delivered professional services for search engine integration and customization for US customers.",
+          "pt": "Prestei serviços profissionais de integração e customização de mecanismos de busca para clientes nos EUA."
+        }
+      ]
+    }
+  ]
+}
+]

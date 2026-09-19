@@ -60,6 +60,17 @@ header .contact-block .contact-label {
   font-weight: 600;
 }
 
+/* ── LANGUAGE TOGGLE (public web build only) ─────────────────── */
+.lang-toggle {
+  text-align: right;
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.lang-toggle a { color: #a0aec0; }
+.lang-toggle a.active { color: #ffffff; text-decoration: underline; }
+
 /* ── SIDEBAR ──────────────────────────────────────────────── */
 .sidebar {
   grid-column: 1;
@@ -243,6 +254,16 @@ header .contact-block .contact-label {
   font-size: 8pt;
 }
 
+/* ── RESPONSIVE (web view only — irrelevant for print/PDF) ───── */
+@media screen and (max-width: 720px) {
+  .page { grid-template-columns: 1fr; }
+  .sidebar { grid-column: 1; border-right: none; border-bottom: 1px solid #dde3ea; }
+  .main { grid-column: 1; }
+  header { flex-direction: column; align-items: flex-start; text-align: left; }
+  header .contact-block { text-align: left; }
+  header .lang-toggle { text-align: left; }
+}
+
 /* ── PRINT / PDF ──────────────────────────────────────────── */
 @media print {
   body { font-size: 9pt; }
@@ -251,4 +272,5 @@ header .contact-block .contact-label {
   .sidebar { padding: 20px 18px; }
   .main { padding: 20px 24px; }
   a { color: inherit; }
+  .lang-toggle { display: none; }
 }

@@ -70,31 +70,46 @@ def get_contact_label(key: str, lang: str) -> str:
     return CONTACT_LABELS.get(lang, {}).get(key) or CONTACT_LABELS["en"][key]
 
 
-def build_header(contact: dict, lang: str) -> str:
+def build_header(contact: dict, lang: str, public: bool = False,
+                  lang_links: dict[str, str] | None = None) -> str:
     name           = esc(t(contact['name'], lang))
     location       = esc(t(contact['location'], lang))
     email          = esc(t(contact['email'], lang))
-    mobile         = esc(t(contact['mobile'], lang))
-    whatsapp_link  = esc(t(contact['whatsapp_link'], lang))
     linkedin_url   = esc(t(contact['linkedin_url'], lang))
     linkedin_label = esc(t(contact['linkedin_label'], lang))
     github_url     = esc(t(contact['github_url'], lang))
     github_label   = esc(t(contact['github_label'], lang))
 
     email_label    = esc(get_contact_label("email", lang))
-    mobile_label   = esc(get_contact_label("mobile", lang))
     linkedin_lbl   = esc(get_contact_label("linkedin", lang))
     github_lbl     = esc(get_contact_label("github", lang))
+
+    mobile_row = ""
+    if not public:
+        mobile        = esc(t(contact['mobile'], lang))
+        whatsapp_link = esc(t(contact['whatsapp_link'], lang))
+        mobile_label  = esc(get_contact_label("mobile", lang))
+        mobile_row = (
+            f'      <div><span class="contact-label">{mobile_label}</span> '
+            f'<a href="{whatsapp_link}">{mobile}</a></div>\n'
+        )
+
+    lang_toggle = ""
+    if public and lang_links:
+        links = " · ".join(
+            f'<a href="{esc(href)}"{" class=\"active\"" if code == lang else ""}>{esc(code.upper())}</a>'
+            for code, href in lang_links.items()
+        )
+        lang_toggle = f'    <div class="lang-toggle">{links}</div>\n'
 
     return f"""  <header>
     <div class="name-block">
       <h1>{name}</h1>
       <p>{location}</p>
     </div>
-    <div class="contact-block">
+{lang_toggle}    <div class="contact-block">
       <div><span class="contact-label">{email_label}</span> <a href="mailto:{email}">{email}</a></div>
-      <div><span class="contact-label">{mobile_label}</span> <a href="{whatsapp_link}">{mobile}</a></div>
-      <div><span class="contact-label">{linkedin_lbl}</span> <a href="{linkedin_url}">{linkedin_label}</a></div>
+{mobile_row}      <div><span class="contact-label">{linkedin_lbl}</span> <a href="{linkedin_url}">{linkedin_label}</a></div>
       <div><span class="contact-label">{github_lbl}</span> <a href="{github_url}">{github_label}</a></div>
     </div>
   </header>"""
@@ -140,14 +155,15 @@ def build_languages(languages: list, lang: str, label: str) -> str:
 def build_education(education: list, lang: str, label: str) -> str:
     html = f'    <div class="section-title">{esc(label)}</div>\n'
     for edu in education:
+        year = edu.get("year")
+        year_html = f'      <div class="year">{esc(t(year, lang))}</div>\n' if year else ""
         html += f"""    <div class="edu-item">
       <div class="degree">{esc(t(edu['degree'], lang))}</div>
       <div class="institution">
         {esc(t(edu['institution'], lang))}<br/>
         {esc(t(edu['location'], lang))}
       </div>
-      <div class="year">{esc(edu['year'])}</div>
-    </div>\n"""
+{year_html}    </div>\n"""
     return html
 
 
@@ -225,9 +241,28 @@ def get_label(data: dict, section: str, lang: str) -> str:
 
 # ── HTML assembly ─────────────────────────────────────────────────────────────
 
-def build_html(data: dict, css_path: Path, lang: str) -> str:
-    title      = t(data["meta"]["title"], lang)
-    header     = build_header(data["contact"], lang)
+def compute_output_path(data: dict, output: str | None, lang: str, public: bool) -> Path:
+    """Derive the per-language output path from meta.output_pdf (or --output),
+    swapping 'cv' for 'public' in public-build mode."""
+    pdf_filename = output or data["meta"].get("output_pdf", "cv_output.pdf")
+    if public:
+        pdf_filename = pdf_filename.replace("cv", "public")
+    return Path(pdf_filename).with_stem(f"{Path(pdf_filename).stem}_{lang}")
+
+
+def build_html(data: dict, css_path: Path, lang: str,
+                output: str | None = None, public: bool = False) -> str:
+    title = t(data["meta"]["title"], lang)
+
+    lang_links = None
+    if public:
+        available = data.get("meta", {}).get("languages_available", ["en"])
+        lang_links = {
+            code: compute_output_path(data, output, code, public).with_suffix(".html").name
+            for code in available
+        }
+
+    header     = build_header(data["contact"], lang, public, lang_links)
     skills     = build_skills(data["skills"],         lang, get_label(data, "skills",     lang))
     languages  = build_languages(data["languages"],   lang, get_label(data, "languages",  lang))
     education  = build_education(data["education"],   lang, get_label(data, "education",  lang))
@@ -347,18 +382,24 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Generate HTML only, skip PDF conversion"
     )
+    parser.add_argument(
+        "--public",
+        action="store_true",
+        help="Build the public/web version: omits the phone number, adds a "
+             "language toggle, and writes to '..._public_<lang>...' instead "
+             "of '..._cv_<lang>...'"
+    )
     return parser.parse_args()
 
 
 def generate_one(data: dict, css_path: Path, lang: str,
-                 output: str | None, html_only: bool) -> None:
+                 output: str | None, html_only: bool, public: bool = False) -> None:
     """Build HTML and optionally PDF for a single language."""
-    pdf_filename = output or data["meta"].get("output_pdf", "cv_output.pdf")
-    pdf_path  = Path(pdf_filename).with_stem(f"{Path(pdf_filename).stem}_{lang}")
+    pdf_path  = compute_output_path(data, output, lang, public)
     html_path = pdf_path.with_suffix(".html")
 
-    print(f"\n  Language : {lang}")
-    html_content = build_html(data, css_path, lang)
+    print(f"\n  Language : {lang}{'  (public build)' if public else ''}")
+    html_content = build_html(data, css_path, lang, output, public)
     html_path.write_text(html_content, encoding="utf-8")
     print(f"  Written  HTML : {html_path}")
 
@@ -417,10 +458,10 @@ def main() -> None:
     if args.all_languages:
         available = data.get("meta", {}).get("languages_available", ["en"])
         for lang in available:
-            generate_one(data, css_path, lang, args.output, args.html_only)
+            generate_one(data, css_path, lang, args.output, args.html_only, args.public)
     else:
         lang = args.lang or data.get("meta", {}).get("default_language", "en")
-        generate_one(data, css_path, lang, args.output, args.html_only)
+        generate_one(data, css_path, lang, args.output, args.html_only, args.public)
 
     print("\n  All done.\n")
 

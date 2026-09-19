@@ -11,31 +11,23 @@
       "en": "Pato Branco, Parana, Brazil",
       "pt": "Pato Branco, Paraná, Brasil"
     },
-    "linkedin_label": "linkedin.com/in/morten-johnsen-74947",
-    "linkedin_url": "https://www.linkedin.com/in/morten-johnsen-74947/",
-    "github_label": "github.com/mortendj/generate-cv",
-    "github_url": "https://github.com/mortendj/generate-cv"
+    "linkedin_label": "linkedin.com/in/morten-johnsen-cv",
+    "linkedin_url": "https://www.linkedin.com/in/morten-johnsen-cv/",
+    "github_label": "github.com/mortendj",
+    "github_url": "https://github.com/mortendj"
   },
   "summary": [
     {
-      "en": "Senior solutions and operations engineer with extensive hands-on experience in search technologies, customer integrations, and global technical support, with roles spanning Europe, the USA, Sri Lanka, and Brazil.",
-      "pt": "Engenheiro sênior de soluções e operações com ampla experiência prática em tecnologias de busca, integrações com clientes e suporte técnico global, com atuação na Europa, nos EUA, no Sri Lanka e no Brasil."
+      "en": "Senior Solutions and Operations Engineer with 20+ years of global experience in search technologies and complex system integrations.",
+      "pt": "Engenheiro Sênior de Soluções e Operações com mais de 20 anos de experiência global em tecnologias de busca e integrações de sistemas complexos."
     },
     {
-      "en": "Known for taking end-to-end ownership of new and complex domains, acquiring expertise, documenting it, and building training, support, and operational structures around new domains.",
-      "pt": "Reconhecido pela capacidade de assumir a responsabilidade completa sobre domínios novos e complexos, adquirindo expertise, documentando-a e estruturando processos de treinamento, suporte e operações em torno desses domínios."
+      "en": "Proven track record of scaling operations and building technical support offices from scratch, including major expansions in Sri Lanka for FAST and Cxense.",
+      "pt": "Histórico comprovado em escalar operações e estruturar escritórios de suporte técnico do zero, incluindo grandes expansões no Sri Lanka para a FAST e Cxense."
     },
     {
-      "en": "Twice opened and scaled new offices in Sri Lanka — first growing a FAST Search R&D and support operation from 2 to over 120 employees, then later establishing a fully independent Cxense support office from the ground up.",
-      "pt": "Abri e escalei escritórios no Sri Lanka em duas ocasiões distintas — primeiro expandindo uma operação de P&D e suporte da FAST Search de 2 para mais de 120 colaboradores, e posteriormente estabelecendo do zero um escritório de suporte totalmente independente para a Cxense."
-    },
-    {
-      "en": "Strong in scripting and automation (Python, PowerShell) and AI-augmented development workflows, with a focus on problem decomposition, system architecture, and maintainability.",
-      "pt": "Sólida experiência em scripting e automação (Python, PowerShell) e em fluxos de desenvolvimento com uso de IA, com foco em decomposição de problemas, arquitetura de sistemas e manutenibilidade."
-    },
-    {
-      "en": "Highly effective in cross-cultural, customer-facing environments; full professional proficiency in English, with professional working proficiency in Portuguese and conversational Spanish.",
-      "pt": "Alta eficácia em ambientes multiculturais e voltados ao cliente; plena proficiência profissional em inglês, com proficiência profissional em português e espanhol conversacional."
+      "en": "Strong technical edge in modernizing workflows with AI-assisted development, Python/PowerShell automation, and scalable system architecture.",
+      "pt": "Forte diferencial técnico na modernização de fluxos de trabalho com desenvolvimento assistido por IA, automação em Python/PowerShell e arquitetura de sistemas escaláveis."
     }
   ],
   "skills": [
@@ -66,20 +58,20 @@
       },
       "items": [
         {
-          "en": "AI-augmented development using modern LLM tools",
-          "pt": "Desenvolvimento com uso de IA por meio de ferramentas modernas de LLM"
+          "en": "Daily use of Claude Code — an agentic AI tool with direct file, command, and tool access — for code development and support-ticket resolution, working directly across Jira, Slack, and the codebase.",
+          "pt": "Uso diário do Claude Code — uma ferramenta de IA agêntica com acesso direto a arquivos, comandos e ferramentas — para desenvolvimento de código e resolução de chamados de suporte, atuando diretamente em Jira, Slack e no código-fonte."
         },
         {
-          "en": "Problem decomposition and task structuring",
-          "pt": "Decomposição de problemas e estruturação de tarefas"
+          "en": "Structured, cross-session case notes and a reusable issue index for consistent investigations.",
+          "pt": "Notas de casos estruturadas entre sessões e um índice de problemas reutilizável para investigações consistentes."
         },
         {
-          "en": "Prompt design and critical review of AI-generated output",
-          "pt": "Design de prompts e revisão crítica de outputs gerados por IA"
+          "en": "Critical review and verification of AI-generated output before acting on it.",
+          "pt": "Revisão crítica e verificação de outputs gerados por IA antes de agir sobre eles."
         },
         {
-          "en": "Focus on architecture, workflows, and maintainability over low-level syntax",
-          "pt": "Foco em arquitetura, fluxos de trabalho e manutenibilidade em detrimento de sintaxe de baixo nível"
+          "en": "Ongoing study of agent internals — tool use, memory, orchestration.",
+          "pt": "Estudo contínuo do funcionamento interno de agentes de IA — uso de ferramentas, memória, orquestração."
         }
       ]
     },
@@ -89,10 +81,7 @@
         "pt": "Plataformas de Busca e Dados"
       },
       "items": [
-        {
-          "en": "FAST Search Engine (deep, long-term experience)",
-          "pt": "FAST Search Engine (experiência profunda e de longa data)"
-        },
+        "FAST Search Engine",
         {
           "en": "Ayfie Inspector and Ayfie Locator",
           "pt": "Ayfie Inspector e Ayfie Locator"
@@ -109,10 +98,7 @@
         "pt": "Infraestrutura"
       },
       "items": [
-        {
-          "en": "Docker",
-          "pt": "Docker"
-        },
+        "Docker",
         {
           "en": "AWS and Azure",
           "pt": "AWS e Azure"
@@ -129,50 +115,10 @@
         "pt": "Ferramentas & Colaboração"
       },
       "items": [
-        {
-          "en": "Git / GitHub",
-          "pt": "Git / GitHub"
-        },
-        {
-          "en": "Jira",
-          "pt": "Jira"
-        },
-        {
-          "en": "Confluence",
-          "pt": "Confluence"
-        },
-        {
-          "en": "SharePoint",
-          "pt": "SharePoint"
-        }
-      ]
-    },
-    {
-      "group": {
-        "en": "Roles & Domains",
-        "pt": "Funções & Domínios"
-      },
-      "items": [
-        {
-          "en": "Customer solutions and integrations",
-          "pt": "Soluções e integrações para clientes"
-        },
-        {
-          "en": "Technical support and troubleshooting",
-          "pt": "Suporte técnico e resolução de problemas"
-        },
-        {
-          "en": "Training, coaching, and knowledge transfer",
-          "pt": "Treinamento, coaching e transferência de conhecimento"
-        },
-        {
-          "en": "Office setup and team scaling",
-          "pt": "Estruturação de escritórios e expansão de equipes"
-        },
-        {
-          "en": "Operations and program management",
-          "pt": "Gestão de operações e programas"
-        }
+        "Git / GitHub",
+        "Jira",
+        "Confluence",
+        "SharePoint"
       ]
     }
   ],
@@ -235,14 +181,13 @@
         "pt": "M.Sc. (Sivilingeniør) em Sistemas de Computação e Telemática"
       },
 	  "institution": {
-        "en": "The Norwegian Institute of Technology (NTH) – now part of NTNU",
-        "pt": "Instituto Norueguês de Tecnologia (NTH) – atualmente parte da NTNU"
+        "en": "The Norwegian Institute of Technology (NTH, now NTNU)",
+        "pt": "Instituto Norueguês de Tecnologia (NTH, agora NTNU)"
       },
       "location": {
         "en": "Trondheim, Norway",
         "pt": "Trondheim, Noruega"
-      },
-      "year": "1993"
+      }
     }
   ],
   "experience": [
@@ -262,28 +207,24 @@
           },
           "bullets": [
             {
-              "en": "Provided integration support and produced technical documentation for Ayfie's OEM eDiscovery solution.",
-              "pt": "Prestei suporte a integrações e produzi documentação técnica para a solução OEM de eDiscovery da Ayfie."
+              "en": "Act as the primary technical point of contact across a broad, concurrent portfolio of customer accounts — owning the full engagement lifecycle from pre-sales architecture guidance through deployment, hands-on support, and diagnostic tooling.",
+              "pt": "Atuo como o principal ponto de contato técnico em um portfólio amplo e simultâneo de contas de clientes — assumindo o ciclo completo do engajamento, da orientação de arquitetura em pré-vendas à implantação, suporte prático e ferramentas de diagnóstico."
             },
             {
-              "en": "Installed, operated, and troubleshot Docker-based Ayfie products using Elasticsearch and Solr as search backends.",
-              "pt": "Instalei, operei e realizei troubleshooting de produtos Ayfie baseados em Docker, utilizando Elasticsearch e Solr como backends de busca."
+              "en": "Installed, operated, and troubleshot Docker-based Ayfie products (Elasticsearch and Solr backends) across new and existing customer environments, including secure remote deployments under varied client security requirements (VPN, MFA, RDP).",
+              "pt": "Instalei, operei e realizei troubleshooting de produtos Ayfie baseados em Docker (backends Elasticsearch e Solr) em ambientes de clientes novos e existentes, incluindo implantações remotas seguras sob requisitos de segurança variados dos clientes (VPN, MFA, RDP)."
             },
             {
-              "en": "Routinely accessed and operated customer servers directly — via VPN, MFA, and Remote Desktop — to deploy and manage Ayfie products across diverse client security environments.",
-              "pt": "Acessei e operei servidores de clientes diretamente — via VPN, MFA e Remote Desktop — para implantar e gerenciar produtos Ayfie em ambientes de segurança variados."
+              "en": "Reproduced customer environments on temporary AWS servers to investigate and resolve complex issues safely, without impacting production systems.",
+              "pt": "Reproduzi ambientes de clientes em servidores temporários na AWS para investigar e resolver problemas complexos com segurança, sem impactar sistemas em produção."
             },
             {
-              "en": "Reproduced customer environments on temporary AWS servers to investigate, test, and resolve complex issues safely, without impacting production systems.",
-              "pt": "Reproduzi ambientes de clientes em servidores temporários na AWS para investigar, testar e resolver problemas complexos com segurança, sem impactar sistemas em produção."
+              "en": "Provided integration support and technical documentation for Ayfie's OEM eDiscovery solution, and built standardized SOW and prerequisites templates that cut clarification cycles and shortened onboarding.",
+              "pt": "Prestei suporte a integrações e produzi documentação técnica para a solução OEM de eDiscovery da Ayfie, além de criar modelos padronizados de SOW e pré-requisitos que reduziram os ciclos de esclarecimento e o tempo de onboarding."
             },
             {
-              "en": "Created and maintained standardized Statement of Work (SOW) and customer prerequisites templates, significantly reducing iterative clarification cycles with customers and shortening onboarding time.",
-              "pt": "Criei e mantive modelos padronizados de Statement of Work (SOW) e pré-requisitos para clientes, reduzindo significativamente os ciclos de esclarecimento iterativo e o tempo de onboarding."
-            },
-            {
-              "en": "Used Python and PowerShell to build automation, diagnostics, and deployment reporting tools — including a PowerShell tool that replaced an error-prone, hours-long manual documentation process with a fully accurate, reproducible report generated in just minutes.",
-              "pt": "Utilizei Python e PowerShell para desenvolver ferramentas de automação, diagnóstico e relatórios de implantação — incluindo uma ferramenta em PowerShell que substituiu um processo manual de documentação sujeito a erros e que levava horas, gerando relatórios totalmente precisos e reproduzíveis em apenas alguns minutos."
+              "en": "Designed, built, and continue to maintain ConfigInspector — Ayfie's PowerShell-based diagnostic tool that captures a full snapshot of a customer's on-prem deployment (licensing, connectors, custom rules, Docker images, certificates, backups, and more), replacing a manual, memory-dependent process where critical details were easily lost or left out.",
+              "pt": "Projetei, desenvolvi e continuo mantendo o ConfigInspector — a ferramenta de diagnóstico da Ayfie, baseada em PowerShell, que captura um retrato completo da implantação on-premise de um cliente (licenciamento, conectores, regras customizadas, imagens Docker, certificados, backups e mais), substituindo um processo manual e dependente da memória, no qual detalhes críticos eram facilmente perdidos ou omitidos."
             }
           ]
         }
@@ -372,192 +313,55 @@
       ]
     },
     {
-      "company": "Fast Search & Transfer",
-      "note": {
-        "en": "acquired by Microsoft",
-        "pt": "adquirida pela Microsoft"
+      "company": {
+        "en": "Fast Search & Transfer (acquired by Microsoft)",
+        "pt": "Fast Search & Transfer (adquirida pela Microsoft)"
       },
       "roles": [
         {
-          "title": "Program Director",
-          "period": "2007 – 2009",
-          "location": "Colombo, Sri Lanka",
-          "bullets": [
-            {
-              "en": "Built and drove the full training program for the new Sri Lanka office — personally delivering sessions and coordinating subject-matter experts flown in from Norway to cover specialized topics.",
-              "pt": "Estruturei e conduzi o programa completo de treinamento para o novo escritório no Sri Lanka — ministrando sessões pessoalmente e coordenando especialistas trazidos da Noruega para cobrir tópicos especializados."
-            },
-            {
-              "en": "Grew the office from an initial team of 2 to over 120 employees.",
-              "pt": "Expandi o escritório de uma equipe inicial de 2 para mais de 120 colaboradores."
-            },
-            {
-              "en": "Established local capabilities in development, support, and management of FAST search engine solutions.",
-              "pt": "Estabeleci capacidades locais em desenvolvimento, suporte e gestão de soluções de busca FAST."
-            }
-          ]
-        },
-        {
-          "title": "Instructor",
-          "period": "2007",
+          "title": "Technical Lead & Program Director",
+          "period": "2001 – 2009",
           "location": {
-            "en": "Bangalore · Hong Kong · Munich · Milan · Seoul",
-            "pt": "Bangalore · Hong Kong · Munique · Milão · Seul"
+            "en": "Global (USA, Japan, Norway, Brazil, Sri Lanka)",
+            "pt": "Global (EUA, Japão, Noruega, Brasil, Sri Lanka)"
           },
           "bullets": [
             {
-              "en": "Took on a three-month global instructor assignment, teaching client engineers the FAST search engine across training centers throughout Europe and Asia — bringing practitioner-level depth that went well beyond standard course delivery.",
-              "pt": "Assumi uma missão global de três meses como instrutor, ensinando engenheiros de clientes a utilizar o mecanismo de busca FAST em centros de treinamento pela Europa e Ásia — com profundidade de nível prático que ia muito além da entrega padrão de cursos."
-            }
-          ]
-        },
-        {
-          "title": "Senior Software Architect",
-          "period": "2006 – 2007",
-          "location": {
-            "en": "Rio de Janeiro, Brazil",
-            "pt": "Rio de Janeiro, Brasil"
-          },
-          "bullets": [
-            {
-              "en": "Acted as technical lead on various OEM projects.",
-              "pt": "Atuei como líder técnico em diversos projetos OEM."
+              "en": "Worked in a range of technical and customer-facing capacities — R&D, software architecture, sales engineering, and professional services — across the USA, Japan, Norway, and Brazil, and took on a leadership role in Sri Lanka.",
+              "pt": "Atuei em diversas funções técnicas e de atendimento ao cliente — P&D, arquitetura de software, vendas técnicas e serviços profissionais — nos EUA, Japão, Noruega e Brasil, além de assumir um papel de liderança no Sri Lanka."
             },
             {
-              "en": "Led a major upgrade and improvement project for EMC Documentum using FAST search technology.",
-              "pt": "Liderei um projeto de grande porte de atualização e melhoria do EMC Documentum utilizando a tecnologia de busca FAST."
-            }
-          ]
-        },
-        {
-          "title": "Senior Software Architect",
-          "period": "2004 – 2006",
-          "location": {
-            "en": "Brevik, Norway",
-            "pt": "Brevik, Noruega"
-          },
-          "bullets": [
-            {
-              "en": "Designed and implemented large customization projects integrating FAST search with enterprise content platforms.",
-              "pt": "Projetei e implementei projetos de customização de grande escala integrando a busca FAST a plataformas de gestão de conteúdo corporativo."
+              "en": "Program Director (Colombo): Built and drove the full training program, growing the office from 2 to 120+ employees.",
+              "pt": "Diretor de Programas (Colombo): Estruturei e conduzi o programa completo de treinamento, expandindo o escritório de 2 para mais de 120 colaboradores."
             },
             {
-              "en": "Key projects: EMC Documentum (now OpenText Documentum) and Renew Data (now KLDiscovery) integrations.",
-              "pt": "Projetos principais: integrações com EMC Documentum (atualmente OpenText Documentum) e Renew Data (atualmente KLDiscovery)."
-            }
-          ]
-        },
-        {
-          "title": "Senior Software Architect",
-          "period": "2003 – 2004",
-          "location": {
-            "en": "Tokyo, Japan",
-            "pt": "Tóquio, Japão"
-          },
-          "bullets": [
-            {
-              "en": "Contributed across sales engineering, professional services, and on-site customer support in the four-person Tokyo regional office.",
-              "pt": "Atuei em vendas técnicas, serviços profissionais e suporte presencial a clientes no escritório regional de Tóquio, composto por quatro pessoas."
-            },
-            {
-              "en": "Supported Japanese customers in integrating and customizing FAST search solutions.",
-              "pt": "Apoiei clientes japoneses na integração e customização de soluções de busca FAST."
-            }
-          ]
-        },
-        {
-          "title": "Senior Software Architect",
-          "period": "2001 – 2003",
-          "location": {
-            "en": "Boston, Massachusetts, USA",
-            "pt": "Boston, Massachusetts, EUA"
-          },
-          "bullets": [
-            {
-              "en": "Led R&D projects to improve CJK (Chinese, Japanese, Korean) search capabilities.",
-              "pt": "Liderei projetos de P&D para aprimorar as capacidades de busca em CJK (chinês, japonês e coreano)."
-            },
-            {
-              "en": "Delivered professional services for search engine integration and customization for US customers.",
-              "pt": "Prestei serviços profissionais de integração e customização de mecanismos de busca para clientes nos EUA."
+              "en": "Senior Software Architect: Acted as technical lead on major OEM customization projects (e.g., EMC Documentum) across global offices.",
+              "pt": "Arquiteto de Software Sênior: Atuei como líder técnico em grandes projetos de customização OEM (ex: EMC Documentum) em escritórios globais."
             }
           ]
         }
       ]
     },
     {
-      "company": "Ericsson",
-      "note": "",
+      "company": {
+        "en": "Previous Experience",
+        "pt": "Experiência Anterior"
+      },
       "roles": [
         {
-          "title": "Senior Staff Software Engineer",
-          "period": "1997 – 2001",
+          "title": {
+            "en": "Software Engineering Roles (Ericsson, OCT)",
+            "pt": "Funções de Engenharia de Software (Ericsson, OCT)"
+          },
+          "period": "Pre-2001",
           "location": {
-            "en": "Raleigh, North Carolina, USA",
-            "pt": "Raleigh, Carolina do Norte, EUA"
+            "en": "USA, Norway, Spain",
+            "pt": "EUA, Noruega, Espanha"
           },
           "bullets": [
             {
-              "en": "Developed a noise reduction microphone array for cellular applications.",
-              "pt": "Desenvolvi um array de microfones com redução de ruído para aplicações em telefonia celular."
-            },
-            {
-              "en": "Developed PC-based configuration tools for cellular handsets, interfacing directly with hardware and embedded firmware.",
-              "pt": "Desenvolvi ferramentas de configuração baseadas em PC para handsets celulares, com interface direta com hardware e firmware embarcado."
-            }
-          ]
-        },
-        {
-          "title": "Software Engineer",
-          "period": "1995 – 1997",
-          "location": {
-            "en": "Arendal, Norway",
-            "pt": "Arendal, Noruega"
-          },
-          "bullets": [
-            {
-              "en": "Engineered low-level firmware for PCMCIA GSM modems, implementing hardware-to-chip integration and communication protocols.",
-              "pt": "Desenvolvi firmware de baixo nível para modems GSM PCMCIA, implementando integração hardware-chip e protocolos de comunicação."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "company": "Sola Secondary School",
-      "note": "",
-      "roles": [
-        {
-          "title": "Teacher",
-          "period": "1994 – 1995",
-          "location": {
-            "en": "Sola, Norway",
-            "pt": "Sola, Noruega"
-          },
-          "bullets": [
-            {
-              "en": "Taught science and IT at secondary school level (10-month position).",
-              "pt": "Lecionei ciências e informática no ensino médio (cargo de 10 meses)."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "company": "OCT",
-      "note": "",
-      "roles": [
-        {
-          "title": "Programmer",
-          "period": "1993 – 1994",
-          "location": {
-            "en": "Valencia, Spain",
-            "pt": "Valência, Espanha"
-          },
-          "bullets": [
-            {
-              "en": "Hired directly out of university to apply thesis expertise commercially — developed an image processing-based traffic incident detection system, extending the vehicle tracking work from the final degree project.",
-              "pt": "Contratado diretamente ao sair da universidade para aplicar comercialmente a expertise desenvolvida na tese — desenvolvi um sistema de detecção de incidentes de tráfego baseado em processamento de imagens, estendendo o trabalho de rastreamento de veículos do projeto de conclusão de curso."
+              "en": "Foundational engineering roles focusing on C/C++, embedded systems, and low-level firmware.",
+              "pt": "Funções fundamentais de engenharia com foco em C/C++, sistemas embarcados e firmware de baixo nível."
             }
           ]
         }
