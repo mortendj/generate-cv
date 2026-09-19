@@ -70,6 +70,25 @@ def get_contact_label(key: str, lang: str) -> str:
     return CONTACT_LABELS.get(lang, {}).get(key) or CONTACT_LABELS["en"][key]
 
 
+FLAG_SVG = {
+    "en": (
+        '<svg class="flag-icon" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" '
+        'aria-hidden="true"><rect width="20" height="14" fill="#B22234"/>'
+        '<g fill="#fff"><rect y="1.08" width="20" height="1.08"/>'
+        '<rect y="3.23" width="20" height="1.08"/><rect y="5.38" width="20" height="1.08"/>'
+        '<rect y="7.54" width="20" height="1.08"/><rect y="9.69" width="20" height="1.08"/>'
+        '<rect y="11.85" width="20" height="1.08"/></g>'
+        '<rect width="8" height="7.54" fill="#3C3B6E"/></svg>'
+    ),
+    "pt": (
+        '<svg class="flag-icon" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" '
+        'aria-hidden="true"><rect width="20" height="14" fill="#009739"/>'
+        '<polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FEDD00"/>'
+        '<circle cx="10" cy="7" r="3.3" fill="#012169"/></svg>'
+    ),
+}
+
+
 def build_header(contact: dict, lang: str, public: bool = False,
                   lang_links: dict[str, str] | None = None) -> str:
     name           = esc(t(contact['name'], lang))
@@ -96,19 +115,22 @@ def build_header(contact: dict, lang: str, public: bool = False,
 
     lang_toggle = ""
     if public and lang_links:
-        links = " · ".join(
-            f'<a href="{esc(href)}"{" class=\"active\"" if code == lang else ""}>{esc(code.upper())}</a>'
+        lang_names = {"en": "English", "pt": "Português"}
+        links = "".join(
+            f'<a href="{esc(href)}"{" class=\"active\"" if code == lang else ""} '
+            f'title="{lang_names.get(code, code.upper())}" aria-label="{lang_names.get(code, code.upper())}">'
+            f'{FLAG_SVG.get(code, "")}</a>'
             for code, href in lang_links.items()
         )
-        lang_toggle = f'    <div class="lang-toggle">{links}</div>\n'
+        lang_toggle = f'      <div class="lang-toggle">{links}</div>\n'
 
     return f"""  <header>
     <div class="name-block">
       <h1>{name}</h1>
       <p>{location}</p>
     </div>
-{lang_toggle}    <div class="contact-block">
-      <div><span class="contact-label">{email_label}</span> <a href="mailto:{email}">{email}</a></div>
+    <div class="contact-block">
+{lang_toggle}      <div><span class="contact-label">{email_label}</span> <a href="mailto:{email}">{email}</a></div>
 {mobile_row}      <div><span class="contact-label">{linkedin_lbl}</span> <a href="{linkedin_url}">{linkedin_label}</a></div>
       <div><span class="contact-label">{github_lbl}</span> <a href="{github_url}">{github_label}</a></div>
     </div>

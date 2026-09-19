@@ -66,10 +66,24 @@ header .contact-block .contact-label {
   font-size: 9pt;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin-bottom: 6px;
 }
 
-.lang-toggle a { color: #a0aec0; }
-.lang-toggle a.active { color: #ffffff; text-decoration: underline; }
+.lang-toggle a {
+  margin-left: 6px;
+}
+
+.lang-toggle a:first-child {
+  margin-left: 0;
+}
+
+.flag-icon {
+  width: 15px;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
 
 /* ── SIDEBAR ──────────────────────────────────────────────── */
 .sidebar {
