@@ -11,10 +11,10 @@
       "en": "Pato Branco, Parana, Brazil",
       "pt": "Pato Branco, Paraná, Brasil"
     },
-    "linkedin_label": "linkedin.com/in/morten-johnsen-74947",
-    "linkedin_url": "https://www.linkedin.com/in/morten-johnsen-74947/",
-    "github_label": "github.com/mortendj/generate-cv",
-    "github_url": "https://github.com/mortendj/generate-cv"
+    "linkedin_label": "linkedin.com/in/morten-johnsen-cv",
+    "linkedin_url": "https://www.linkedin.com/in/morten-johnsen-cv/",
+    "github_label": "github.com/mortendj",
+    "github_url": "https://github.com/mortendj"
   },
   "summary": [
     {
@@ -58,20 +58,20 @@
       },
       "items": [
         {
-          "en": "AI-augmented development using modern LLM tools",
-          "pt": "Desenvolvimento com uso de IA por meio de ferramentas modernas de LLM"
+          "en": "Daily use of Claude Code — an agentic AI tool with direct file, command, and tool access — for code development and support-ticket resolution, working directly across Jira, Slack, and the codebase.",
+          "pt": "Uso diário do Claude Code — uma ferramenta de IA agêntica com acesso direto a arquivos, comandos e ferramentas — para desenvolvimento de código e resolução de chamados de suporte, atuando diretamente em Jira, Slack e no código-fonte."
         },
         {
-          "en": "Problem decomposition and task structuring",
-          "pt": "Decomposição de problemas e estruturação de tarefas"
+          "en": "Structured, cross-session case notes and a reusable issue index for consistent investigations.",
+          "pt": "Notas de casos estruturadas entre sessões e um índice de problemas reutilizável para investigações consistentes."
         },
         {
-          "en": "Prompt design and critical review of AI-generated output",
-          "pt": "Design de prompts e revisão crítica de outputs gerados por IA"
+          "en": "Critical review and verification of AI-generated output before acting on it.",
+          "pt": "Revisão crítica e verificação de outputs gerados por IA antes de agir sobre eles."
         },
         {
-          "en": "Focus on scalable software architecture, optimized workflows, and high maintainability, leveraging AI to accelerate development.",
-          "pt": "Foco em arquitetura de software escalável, fluxos de trabalho otimizados e alta manutenibilidade, alavancando IA para acelerar o desenvolvimento."
+          "en": "Ongoing study of agent internals — tool use, memory, orchestration.",
+          "pt": "Estudo contínuo do funcionamento interno de agentes de IA — uso de ferramentas, memória, orquestração."
         }
       ]
     },
@@ -207,28 +207,24 @@
           },
           "bullets": [
             {
-              "en": "Provided integration support and produced technical documentation for Ayfie's OEM eDiscovery solution.",
-              "pt": "Prestei suporte a integrações e produzi documentação técnica para a solução OEM de eDiscovery da Ayfie."
+              "en": "Act as the primary technical point of contact across a broad, concurrent portfolio of customer accounts — owning the full engagement lifecycle from pre-sales architecture guidance through deployment, hands-on support, and diagnostic tooling.",
+              "pt": "Atuo como o principal ponto de contato técnico em um portfólio amplo e simultâneo de contas de clientes — assumindo o ciclo completo do engajamento, da orientação de arquitetura em pré-vendas à implantação, suporte prático e ferramentas de diagnóstico."
             },
             {
-              "en": "Installed, operated, and troubleshot Docker-based Ayfie products using Elasticsearch and Solr as search backends.",
-              "pt": "Instalei, operei e realizei troubleshooting de produtos Ayfie baseados em Docker, utilizando Elasticsearch e Solr como backends de busca."
+              "en": "Installed, operated, and troubleshot Docker-based Ayfie products (Elasticsearch and Solr backends) across new and existing customer environments, including secure remote deployments under varied client security requirements (VPN, MFA, RDP).",
+              "pt": "Instalei, operei e realizei troubleshooting de produtos Ayfie baseados em Docker (backends Elasticsearch e Solr) em ambientes de clientes novos e existentes, incluindo implantações remotas seguras sob requisitos de segurança variados dos clientes (VPN, MFA, RDP)."
             },
             {
-              "en": "Managed secure, remote deployments and operations of Ayfie products across restricted and diverse client security environments (VPN, MFA, RDP).",
-              "pt": "Gerenciei implantações e operações remotas seguras dos produtos Ayfie em ambientes de segurança restritos e diversos dos clientes (VPN, MFA, RDP)."
+              "en": "Reproduced customer environments on temporary AWS servers to investigate and resolve complex issues safely, without impacting production systems.",
+              "pt": "Reproduzi ambientes de clientes em servidores temporários na AWS para investigar e resolver problemas complexos com segurança, sem impactar sistemas em produção."
             },
             {
-              "en": "Reproduced customer environments on temporary AWS servers to investigate, test, and resolve complex issues safely, without impacting production systems.",
-              "pt": "Reproduzi ambientes de clientes em servidores temporários na AWS para investigar, testar e resolver problemas complexos com segurança, sem impactar sistemas em produção."
+              "en": "Provided integration support and technical documentation for Ayfie's OEM eDiscovery solution, and built standardized SOW and prerequisites templates that cut clarification cycles and shortened onboarding.",
+              "pt": "Prestei suporte a integrações e produzi documentação técnica para a solução OEM de eDiscovery da Ayfie, além de criar modelos padronizados de SOW e pré-requisitos que reduziram os ciclos de esclarecimento e o tempo de onboarding."
             },
             {
-              "en": "Created and maintained standardized Statement of Work (SOW) and customer prerequisites templates, significantly reducing iterative clarification cycles with customers and shortening onboarding time.",
-              "pt": "Criei e mantive modelos padronizados de Statement of Work (SOW) e pré-requisitos para clientes, reduzindo significativamente os ciclos de esclarecimento iterativo e o tempo de onboarding."
-            },
-            {
-              "en": "Used Python and PowerShell to build automation, diagnostics, and deployment reporting tools — including a PowerShell tool that replaced an error-prone, hours-long manual documentation process with a fully accurate, reproducible report generated in just minutes.",
-              "pt": "Utilizei Python e PowerShell para desenvolver ferramentas de automação, diagnóstico e relatórios de implantação — incluindo uma ferramenta em PowerShell que substituiu um processo manual de documentação sujeito a erros e que levava horas, gerando relatórios totalmente precisos e reproduzíveis em apenas alguns minutos."
+              "en": "Designed, built, and continue to maintain ConfigInspector — Ayfie's PowerShell-based diagnostic tool that captures a full snapshot of a customer's on-prem deployment (licensing, connectors, custom rules, Docker images, certificates, backups, and more), replacing a manual, memory-dependent process where critical details were easily lost or left out.",
+              "pt": "Projetei, desenvolvi e continuo mantendo o ConfigInspector — a ferramenta de diagnóstico da Ayfie, baseada em PowerShell, que captura um retrato completo da implantação on-premise de um cliente (licenciamento, conectores, regras customizadas, imagens Docker, certificados, backups e mais), substituindo um processo manual e dependente da memória, no qual detalhes críticos eram facilmente perdidos ou omitidos."
             }
           ]
         }
@@ -331,8 +327,8 @@
           },
           "bullets": [
             {
-              "en": "Progressed through various global leadership and architecture roles across the USA, Japan, Norway, Brazil, and Sri Lanka.",
-              "pt": "Progredi por diversas funções globais de liderança e arquitetura nos EUA, Japão, Noruega, Brasil e Sri Lanka."
+              "en": "Worked in a range of technical and customer-facing capacities — R&D, software architecture, sales engineering, and professional services — across the USA, Japan, Norway, and Brazil, and took on a leadership role in Sri Lanka.",
+              "pt": "Atuei em diversas funções técnicas e de atendimento ao cliente — P&D, arquitetura de software, vendas técnicas e serviços profissionais — nos EUA, Japão, Noruega e Brasil, além de assumir um papel de liderança no Sri Lanka."
             },
             {
               "en": "Program Director (Colombo): Built and drove the full training program, growing the office from 2 to 120+ employees.",
