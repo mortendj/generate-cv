@@ -337,7 +337,13 @@ def html_to_pdf(html_path: Path, pdf_path: Path) -> None:
     file_uri = html_path.resolve().as_uri()
 
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        try:
+            browser = p.chromium.launch()
+        except Exception:
+            # Playwright's own Chromium build isn't installed (e.g. sandboxed
+            # environments that block downloading a new browser binary) —
+            # fall back to the system's Edge install, which is Chromium-based.
+            browser = p.chromium.launch(channel="msedge")
         page = browser.new_page()
         page.goto(file_uri, wait_until="networkidle")
         page.pdf(

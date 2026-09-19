@@ -215,16 +215,12 @@
               "pt": "Instalei, operei e realizei troubleshooting de produtos Ayfie baseados em Docker (backends Elasticsearch e Solr) em ambientes de clientes novos e existentes, incluindo implantações remotas seguras sob requisitos de segurança variados dos clientes (VPN, MFA, RDP)."
             },
             {
-              "en": "Reproduced customer environments on temporary AWS servers to investigate and resolve complex issues safely, without impacting production systems.",
-              "pt": "Reproduzi ambientes de clientes em servidores temporários na AWS para investigar e resolver problemas complexos com segurança, sem impactar sistemas em produção."
+              "en": "Provided integration support and technical documentation across multiple Ayfie products, and built standardized SOW and prerequisites templates that cut clarification cycles and shortened onboarding.",
+              "pt": "Prestei suporte a integrações e produzi documentação técnica para diversos produtos da Ayfie, além de criar modelos padronizados de SOW e pré-requisitos que reduziram os ciclos de esclarecimento e o tempo de onboarding."
             },
             {
-              "en": "Provided integration support and technical documentation for Ayfie's OEM eDiscovery solution, and built standardized SOW and prerequisites templates that cut clarification cycles and shortened onboarding.",
-              "pt": "Prestei suporte a integrações e produzi documentação técnica para a solução OEM de eDiscovery da Ayfie, além de criar modelos padronizados de SOW e pré-requisitos que reduziram os ciclos de esclarecimento e o tempo de onboarding."
-            },
-            {
-              "en": "Designed, built, and continue to maintain ConfigInspector — Ayfie's PowerShell-based diagnostic tool that captures a full snapshot of a customer's on-prem deployment (licensing, connectors, custom rules, Docker images, certificates, backups, and more), replacing a manual, memory-dependent process where critical details were easily lost or left out.",
-              "pt": "Projetei, desenvolvi e continuo mantendo o ConfigInspector — a ferramenta de diagnóstico da Ayfie, baseada em PowerShell, que captura um retrato completo da implantação on-premise de um cliente (licenciamento, conectores, regras customizadas, imagens Docker, certificados, backups e mais), substituindo um processo manual e dependente da memória, no qual detalhes críticos eram facilmente perdidos ou omitidos."
+              "en": "Designed and built — and continue to maintain — Ayfie ConfigInspector, a PowerShell-based diagnostic tool that captures a full snapshot of a customer's on-prem deployment (licensing, connectors, custom rules, Docker images, certificates, backups, and more), replacing a manual process where critical details were easily lost or forgotten.",
+              "pt": "Projetei e desenvolvi — e continuo mantendo — o Ayfie ConfigInspector, uma ferramenta de diagnóstico baseada em PowerShell que captura um retrato completo da implantação on-premise de um cliente (licenciamento, conectores, regras customizadas, imagens Docker, certificados, backups e mais), substituindo um processo manual no qual detalhes críticos eram facilmente perdidos ou esquecidos."
             }
           ]
         }
@@ -335,8 +331,8 @@
               "pt": "Diretor de Programas (Colombo): Estruturei e conduzi o programa completo de treinamento, expandindo o escritório de 2 para mais de 120 colaboradores."
             },
             {
-              "en": "Senior Software Architect: Acted as technical lead on major OEM customization projects (e.g., EMC Documentum) across global offices.",
-              "pt": "Arquiteto de Software Sênior: Atuei como líder técnico em grandes projetos de customização OEM (ex: EMC Documentum) em escritórios globais."
+              "en": "Senior Software Architect: Acted as technical lead on major OEM customization projects (e.g., EMC Documentum) across FAST's country offices.",
+              "pt": "Arquiteto de Software Sênior: Atuei como líder técnico em grandes projetos de customização OEM (ex: EMC Documentum) nos escritórios da FAST em diferentes países."
             }
           ]
         }
